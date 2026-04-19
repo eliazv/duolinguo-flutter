@@ -1,19 +1,17 @@
-
 import 'package:flutter/material.dart';
 
 class BottomNavigator extends StatelessWidget {
   final Function(int) onPress;
   final int currentIndex;
 
-  const BottomNavigator({required this.currentIndex, required this.onPress, Key? key,
-
-    })
-      : super(key: key);
-
+  const BottomNavigator({
+    required this.currentIndex,
+    required this.onPress,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
-
     return BottomNavigationBar(
       showSelectedLabels: false,
       // enableFeedback: false,
@@ -87,7 +85,6 @@ class BottomNavigator extends StatelessWidget {
   // State<StatefulWidget> createState() {
   //   return _BottomNavigatorState();
   // }
-
 }
 
 // class _BottomNavigatorState extends State<BottomNavigator> {

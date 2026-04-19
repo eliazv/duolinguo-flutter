@@ -2,7 +2,7 @@ import 'package:duolingo/views/lesson_screen/lesson_screen.dart';
 import 'package:flutter/material.dart';
 
 class ExploreScreen extends StatelessWidget {
-  const ExploreScreen({Key? key}) : super(key: key);
+  const ExploreScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +49,8 @@ class ExploreScreen extends StatelessWidget {
     );
   }
 
-  newsBox(String image, String title, String description, String date) {
+  Container newsBox(
+      String image, String title, String description, String date) {
     return Container(
       // height: 100,
       margin: const EdgeInsets.only(bottom: 5, top: 15, left: 15, right: 15),
@@ -71,7 +72,7 @@ class ExploreScreen extends StatelessWidget {
     );
   }
 
-  newsDate(String date) {
+  Container newsDate(String date) {
     return Container(
       margin: const EdgeInsets.only(left: 15, bottom: 5),
       child: Align(
@@ -88,7 +89,7 @@ class ExploreScreen extends StatelessWidget {
     );
   }
 
-  newsDescription(String description) {
+  Container newsDescription(String description) {
     return Container(
       margin: const EdgeInsets.only(left: 15, bottom: 10),
       child: Text(
@@ -102,7 +103,7 @@ class ExploreScreen extends StatelessWidget {
     );
   }
 
-  newsTitle(String title) {
+  Container newsTitle(String title) {
     return Container(
       margin: const EdgeInsets.only(left: 15, bottom: 10),
       child: Align(
@@ -119,7 +120,7 @@ class ExploreScreen extends StatelessWidget {
     );
   }
 
-  imageBox(String image) {
+  Container imageBox(String image) {
     return Container(
       margin: const EdgeInsets.only(bottom: 10, top: 15, right: 15, left: 15),
       decoration: BoxDecoration(

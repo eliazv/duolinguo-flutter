@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Statistics extends StatelessWidget {
-  const Statistics({Key? key}) : super(key: key);
+  const Statistics({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class Statistics extends StatelessWidget {
     );
   }
 
-  statBox(String iconImage, String record, String label) {
+  Container statBox(String iconImage, String record, String label) {
     return Container(
       padding: const EdgeInsets.only(left: 12, top: 5, bottom: 5),
       decoration: BoxDecoration(
@@ -78,7 +78,7 @@ class Statistics extends StatelessWidget {
     );
   }
 
-  bigTitle(String text) {
+  Align bigTitle(String text) {
     return Align(
       alignment: Alignment.centerLeft,
       child: Container(

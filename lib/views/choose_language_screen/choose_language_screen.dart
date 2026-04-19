@@ -3,7 +3,7 @@ import 'package:duolingo/views/choose_language_screen/components/continue_button
 import 'package:flutter/material.dart';
 
 class ChooseLanguageScreen extends StatelessWidget {
-  const ChooseLanguageScreen({Key? key}) : super(key: key);
+  const ChooseLanguageScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

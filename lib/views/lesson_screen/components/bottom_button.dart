@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 class BottomButton extends StatelessWidget {
   final BuildContext context;
   final String title;
-  const BottomButton(this.context, {required this.title, Key? key})
-      : super(key: key);
+  const BottomButton(this.context, {required this.title, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,19 +17,19 @@ class BottomButton extends StatelessWidget {
             Navigator.pop(context);
             Navigator.pop(context);
           },
+          style: ElevatedButton.styleFrom(
+            backgroundColor: const Color(0xFF58CC02),
+            elevation: 5,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+          ),
           child: Text(
             title,
             style: const TextStyle(
               color: Colors.white,
               fontSize: 20,
               fontWeight: FontWeight.bold,
-            ),
-          ),
-          style: ElevatedButton.styleFrom(
-            backgroundColor: const Color(0xFF58CC02),
-            elevation: 5,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
             ),
           ),
         ),

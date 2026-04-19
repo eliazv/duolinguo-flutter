@@ -5,7 +5,7 @@ import 'components/get_started_button.dart';
 import 'components/log_in_button.dart';
 
 class WelcomeScreen extends StatefulWidget {
-  const WelcomeScreen({Key? key}) : super(key: key);
+  const WelcomeScreen({super.key});
 
   @override
   State<StatefulWidget> createState() {
@@ -26,7 +26,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     );
   }
 
-  bottomButtons() {
+  Center bottomButtons() {
     return Center(
       child: Align(
         alignment: Alignment.bottomCenter,

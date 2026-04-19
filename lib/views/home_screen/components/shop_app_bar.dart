@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ShopAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const ShopAppBar({Key? key}) : super(key: key);
+  const ShopAppBar({super.key});
 
   @override
   Size get preferredSize => const Size.fromHeight(55);
@@ -21,7 +21,7 @@ class ShopAppBar extends StatelessWidget implements PreferredSizeWidget {
     );
   }
 
-  lingot(int lingot) {
+  List<Row> lingot(int lingot) {
     return [
       Row(
         children: [

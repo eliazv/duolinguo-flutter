@@ -4,7 +4,7 @@ import 'package:percent_indicator/linear_percent_indicator.dart';
 class StageProgressBar extends StatelessWidget {
   final double percent;
 
-  const StageProgressBar(this.percent, {Key? key}) : super(key: key);
+  const StageProgressBar(this.percent, {super.key});
 
   @override
   Widget build(BuildContext context) {

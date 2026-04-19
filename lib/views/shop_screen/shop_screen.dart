@@ -1,31 +1,57 @@
 import 'package:flutter/material.dart';
 
 class ShopScreen extends StatelessWidget {
-  const ShopScreen({Key? key}) : super(key: key);
+  const ShopScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ListView(
       children: [
         bigTitle('Streak'),
-        item('assets/images/streak-freeze.png', 'Streak Freeze',
+        item(
+            'assets/images/streak-freeze.png',
+            'Streak Freeze',
             'Protect your streak if you miss a day'
-                ' of practice. Equip up to 2 at once.', null, 2, 2),
+                ' of practice. Equip up to 2 at once.',
+            null,
+            2,
+            2),
         bigTitle('Power-Ups'),
-        item('assets/images/calendar.png', 'Double or Nothing',
-            'Attempt to double your five lingot wager by maintaining a seven day streak.', 450, null, null),
+        item(
+            'assets/images/calendar.png',
+            'Double or Nothing',
+            'Attempt to double your five lingot wager by maintaining a seven day streak.',
+            450,
+            null,
+            null),
         bigTitle('Outfits'),
-        item('assets/images/duo-1.png', 'Formal Attire',
-            'Learn in style. Duo has always been a sharp guy, now he\'ll look sharp too.', 1000, null, null),
-        item('assets/images/duo-2.png', 'Luxury Tracksuit',
-            'Learn in luxury. Duo will love the feel of 24 carat gold silk on his feathers.', 2000, null, null),
-        item('assets/images/duo-3.png', 'Super Duo',
-            'Transform Duo from a humble owl into a fearless feathered crimefighter.', 3000, null, null),
+        item(
+            'assets/images/duo-1.png',
+            'Formal Attire',
+            'Learn in style. Duo has always been a sharp guy, now he\'ll look sharp too.',
+            1000,
+            null,
+            null),
+        item(
+            'assets/images/duo-2.png',
+            'Luxury Tracksuit',
+            'Learn in luxury. Duo will love the feel of 24 carat gold silk on his feathers.',
+            2000,
+            null,
+            null),
+        item(
+            'assets/images/duo-3.png',
+            'Super Duo',
+            'Transform Duo from a humble owl into a fearless feathered crimefighter.',
+            3000,
+            null,
+            null),
       ],
     );
   }
 
-  item(String image, String label, String description, int? price, int? current, int? total) {
+  Container item(String image, String label, String description, int? price,
+      int? current, int? total) {
     return Container(
       margin: const EdgeInsets.only(left: 15, right: 15, top: 10),
       padding: const EdgeInsets.all(5),
@@ -57,7 +83,7 @@ class ShopScreen extends StatelessWidget {
     );
   }
 
-  equippedBox(int current, int total) {
+  Container equippedBox(int current, int total) {
     return Container(
       padding: const EdgeInsets.all(5),
       decoration: BoxDecoration(
@@ -72,7 +98,7 @@ class ShopScreen extends StatelessWidget {
     );
   }
 
-  priceBox(int price) {
+  Row priceBox(int price) {
     return Row(
       children: [
         Image.asset(
@@ -96,7 +122,7 @@ class ShopScreen extends StatelessWidget {
     );
   }
 
-  itemDescription(String name) {
+  SizedBox itemDescription(String name) {
     return SizedBox(
       width: 210,
       child: Text(
@@ -111,7 +137,7 @@ class ShopScreen extends StatelessWidget {
     );
   }
 
-  itemLabel(String name) {
+  Text itemLabel(String name) {
     return Text(
       name,
       style: const TextStyle(
@@ -122,14 +148,14 @@ class ShopScreen extends StatelessWidget {
     );
   }
 
-  itemImage(String image) {
+  Image itemImage(String image) {
     return Image.asset(
       image,
       width: 110,
     );
   }
 
-  bigTitle(String text) {
+  Align bigTitle(String text) {
     return Align(
       alignment: Alignment.centerLeft,
       child: Container(

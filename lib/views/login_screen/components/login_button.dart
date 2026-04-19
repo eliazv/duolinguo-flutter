@@ -7,8 +7,7 @@ class LoginButton extends StatefulWidget {
   final TextEditingController passwordController;
 
   const LoginButton(this.auth, this.emailController, this.passwordController,
-      {Key? key})
-      : super(key: key);
+      {super.key});
 
   @override
   State<StatefulWidget> createState() {
@@ -31,14 +30,6 @@ class LoginButtonState extends State<LoginButton> {
           margin: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
           padding: const EdgeInsets.only(bottom: 2),
           child: ElevatedButton(
-            child: const Text(
-              'SIGN IN',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
             style: ElevatedButton.styleFrom(
               backgroundColor: const Color(0xFF1CB0F6),
               elevation: 5,
@@ -47,13 +38,21 @@ class LoginButtonState extends State<LoginButton> {
               ),
             ),
             onPressed: loginPressed,
+            child: const Text(
+              'SIGN IN',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
         ),
       ],
     );
   }
 
-  loginPressed() {
+  void loginPressed() {
     String userId = '';
     String email = widget.emailController.text;
     String password = widget.passwordController.text;

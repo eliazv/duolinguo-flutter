@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ContinueButton extends StatelessWidget {
   final BuildContext context;
-  const ContinueButton(this.context, {Key? key}) : super(key: key);
+  const ContinueButton(this.context, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,19 +15,19 @@ class ContinueButton extends StatelessWidget {
         onPressed: () {
           Navigator.pushNamed(context, '/choose-language');
         },
+        style: ElevatedButton.styleFrom(
+          backgroundColor: const Color(0xFF58CC02),
+          elevation: 5,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+        ),
         child: const Text(
           'CONTINUE',
           style: TextStyle(
             color: Colors.white,
             fontSize: 20,
             fontWeight: FontWeight.bold,
-          ),
-        ),
-        style: ElevatedButton.styleFrom(
-          backgroundColor: const Color(0xFF58CC02),
-          elevation: 5,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
           ),
         ),
       ),

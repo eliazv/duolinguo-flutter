@@ -2,7 +2,7 @@ import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
 import 'package:flutter/material.dart';
 
 class Friends extends StatelessWidget {
-  const Friends({Key? key}) : super(key: key);
+  const Friends({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class Friends extends StatelessWidget {
     );
   }
 
-  followers() {
+  ListView followers() {
     return ListView(
       shrinkWrap: true,
       children: [
@@ -49,7 +49,7 @@ class Friends extends StatelessWidget {
     );
   }
 
-  following() {
+  ListView following() {
     return ListView(
       shrinkWrap: true,
       children: [
@@ -64,7 +64,7 @@ class Friends extends StatelessWidget {
     );
   }
 
-  friend(String image, String name, String xp) {
+  Container friend(String image, String name, String xp) {
     return Container(
       decoration: BoxDecoration(
         // borderRadius: BorderRadius.circular(10),
@@ -89,7 +89,7 @@ class Friends extends StatelessWidget {
     );
   }
 
-  xpAmount(String xp) {
+  Text xpAmount(String xp) {
     return Text(
       '$xp XP',
       style: const TextStyle(
@@ -100,7 +100,7 @@ class Friends extends StatelessWidget {
     );
   }
 
-  friendName(String name) {
+  Text friendName(String name) {
     return Text(
       name,
       style: const TextStyle(
@@ -111,7 +111,7 @@ class Friends extends StatelessWidget {
     );
   }
 
-  avatar(String image) {
+  Container avatar(String image) {
     return Container(
       padding: const EdgeInsets.only(top: 5),
       margin: const EdgeInsets.all(10),
@@ -122,7 +122,7 @@ class Friends extends StatelessWidget {
     );
   }
 
-  tabBarText(String text) {
+  Text tabBarText(String text) {
     return Text(
       text,
       style: const TextStyle(
@@ -130,7 +130,7 @@ class Friends extends StatelessWidget {
     );
   }
 
-  bigTitle(String text) {
+  Align bigTitle(String text) {
     return Align(
       alignment: Alignment.centerLeft,
       child: Container(

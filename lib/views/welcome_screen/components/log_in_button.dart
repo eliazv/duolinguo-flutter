@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class LogInButton extends StatelessWidget {
   final BuildContext context;
-  const LogInButton(this.context, {Key? key}) : super(key: key);
+  const LogInButton(this.context, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,16 +22,16 @@ class LogInButton extends StatelessWidget {
           //   MaterialPageRoute(builder: (context) => const LoginScreen()),
           // );
         },
-        child: const Text(
-          'I ALREADY HAVE AN ACCOUNT',
-          style: TextStyle(
-              color: Colors.green, fontSize: 18, fontWeight: FontWeight.bold),
-        ),
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.white,
           elevation: 5,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        ),
+        child: const Text(
+          'I ALREADY HAVE AN ACCOUNT',
+          style: TextStyle(
+              color: Colors.green, fontSize: 18, fontWeight: FontWeight.bold),
         ),
       ),
     );

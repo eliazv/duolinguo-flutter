@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class GridLesson extends StatelessWidget {
   final Widget checkButton;
-  const GridLesson({required this.checkButton, Key? key}) : super(key: key);
+  const GridLesson({required this.checkButton, super.key});
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -30,7 +30,7 @@ class GridLesson extends StatelessWidget {
     );
   }
 
-  gridChoice(String image, String title) {
+  Container gridChoice(String image, String title) {
     return Container(
       height: 400,
       padding: const EdgeInsets.all(5),
@@ -60,7 +60,7 @@ class GridLesson extends StatelessWidget {
     );
   }
 
-  questionRow(String question) {
+  Container questionRow(String question) {
     return Container(
       margin: const EdgeInsets.only(left: 15, bottom: 5),
       child: Row(
@@ -79,7 +79,7 @@ class GridLesson extends StatelessWidget {
     );
   }
 
-  speakButton() {
+  Container speakButton() {
     return Container(
       padding: const EdgeInsets.all(5),
       decoration: BoxDecoration(
@@ -94,7 +94,7 @@ class GridLesson extends StatelessWidget {
     );
   }
 
-  instruction(String text) {
+  Align instruction(String text) {
     return Align(
       alignment: Alignment.centerLeft,
       child: Container(

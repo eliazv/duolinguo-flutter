@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class InputField extends StatefulWidget {
   final TextEditingController emailController;
   final TextEditingController passwordController;
-  const InputField(this.emailController, this.passwordController, {Key? key}) : super(key: key);
+  const InputField(this.emailController, this.passwordController, {super.key});
 
   @override
   State<StatefulWidget> createState() {
@@ -27,7 +27,7 @@ class InputFieldState extends State<InputField> {
     );
   }
 
-  accountField() {
+  TextFormField accountField() {
     return TextFormField(
       controller: widget.emailController,
       keyboardType: TextInputType.emailAddress,
@@ -47,7 +47,7 @@ class InputFieldState extends State<InputField> {
     );
   }
 
-  passwordField() {
+  TextFormField passwordField() {
     return TextFormField(
       controller: widget.passwordController,
       obscureText: isObscure,

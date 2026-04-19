@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FriendUpdates extends StatelessWidget {
-  const FriendUpdates({Key? key}) : super(key: key);
+  const FriendUpdates({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,8 @@ class FriendUpdates extends StatelessWidget {
             ),
           ),
           const Spacer(),
-          const Icon(Icons.arrow_forward_ios, size: 20, color: Color(0xFFAFAFAF)),
+          const Icon(Icons.arrow_forward_ios,
+              size: 20, color: Color(0xFFAFAFAF)),
           const Padding(padding: EdgeInsets.all(10)),
         ],
       ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class LoginAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const LoginAppBar({Key? key}) : super(key: key);
+  const LoginAppBar({super.key});
 
   @override
   Size get preferredSize => const Size.fromHeight(100);
@@ -14,7 +14,7 @@ class LoginAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: Text(
         'Enter your details',
         style:
-        TextStyle(color: Colors.grey.shade600, fontWeight: FontWeight.bold),
+            TextStyle(color: Colors.grey.shade600, fontWeight: FontWeight.bold),
       ),
       centerTitle: true,
       leading: IconButton(
@@ -28,5 +28,4 @@ class LoginAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
     );
   }
-
 }

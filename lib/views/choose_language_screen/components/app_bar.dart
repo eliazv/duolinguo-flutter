@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class ChooseLanguageAppbar extends StatelessWidget
     implements PreferredSizeWidget {
-  const ChooseLanguageAppbar({Key? key}) : super(key: key);
+  const ChooseLanguageAppbar({super.key});
 
   @override
   Size get preferredSize => const Size.fromHeight(75);

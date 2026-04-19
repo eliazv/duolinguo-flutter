@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class Achievements extends StatelessWidget {
-  const Achievements({Key? key}) : super(key: key);
+  const Achievements({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,8 +41,8 @@ class Achievements extends StatelessWidget {
     );
   }
 
-  achievement(String image, String label, String description, int current,
-      int target, int level) {
+  Container achievement(String image, String label, String description,
+      int current, int target, int level) {
     return Container(
       padding: const EdgeInsets.only(left: 15),
       height: 135,
@@ -71,7 +71,7 @@ class Achievements extends StatelessWidget {
     );
   }
 
-  moreBox(String text) {
+  Container moreBox(String text) {
     return Container(
       height: 45,
       padding: const EdgeInsets.only(left: 15),
@@ -101,7 +101,7 @@ class Achievements extends StatelessWidget {
     );
   }
 
-  achievementImage(String image, int level) {
+  Stack achievementImage(String image, int level) {
     return Stack(
       alignment: Alignment.center,
       children: [
@@ -124,7 +124,7 @@ class Achievements extends StatelessWidget {
     );
   }
 
-  progressBar(int current, int target) {
+  SizedBox progressBar(int current, int target) {
     return SizedBox(
       width: 250,
       child: Row(
@@ -159,7 +159,7 @@ class Achievements extends StatelessWidget {
     );
   }
 
-  achievementDescription(String name) {
+  SizedBox achievementDescription(String name) {
     return SizedBox(
       width: 250,
       child: Text(
@@ -174,7 +174,7 @@ class Achievements extends StatelessWidget {
     );
   }
 
-  achievementLabel(String name) {
+  Text achievementLabel(String name) {
     return Text(
       name,
       style: const TextStyle(
@@ -185,7 +185,7 @@ class Achievements extends StatelessWidget {
     );
   }
 
-  bigTitle(String text) {
+  Align bigTitle(String text) {
     return Align(
       alignment: Alignment.centerLeft,
       child: Container(

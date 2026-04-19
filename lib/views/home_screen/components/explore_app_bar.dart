@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ExploreAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const ExploreAppBar({Key? key}) : super(key: key);
+  const ExploreAppBar({super.key});
 
   @override
   Size get preferredSize => const Size.fromHeight(55);

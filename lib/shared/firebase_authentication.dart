@@ -45,7 +45,7 @@ class FirebaseAuthentication {
 
   Future<String?> loginWithGoogle() async {
     await _ensureGoogleInitialized();
-    final GoogleSignInAccount? googleSignInAccount =
+    final GoogleSignInAccount googleSignInAccount =
         await googleSignIn.authenticate();
     if (googleSignInAccount == null) {
       return null;

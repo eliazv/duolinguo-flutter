@@ -5,7 +5,7 @@ import 'components/double_course_node.dart';
 import 'components/triple_course_node.dart';
 
 class CourseTree extends StatelessWidget {
-  const CourseTree({Key? key}) : super(key: key);
+  const CourseTree({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FriendSuggestions extends StatelessWidget {
-  const FriendSuggestions({Key? key}) : super(key: key);
+  const FriendSuggestions({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class FriendSuggestions extends StatelessWidget {
     );
   }
 
-  friendBox(String image, String name, String follower) {
+  Container friendBox(String image, String name, String follower) {
     return Container(
       margin: const EdgeInsets.only(left: 10),
       padding: const EdgeInsets.all(5),
@@ -53,7 +53,7 @@ class FriendSuggestions extends StatelessWidget {
     );
   }
 
-  followButton() {
+  Container followButton() {
     return Container(
       width: double.infinity,
       height: 30,
@@ -61,6 +61,13 @@ class FriendSuggestions extends StatelessWidget {
       // padding: const EdgeInsets.only(bottom: 2),
       child: ElevatedButton(
         onPressed: () {},
+        style: ElevatedButton.styleFrom(
+          backgroundColor: const Color(0xFF1CB0F6),
+          elevation: 5,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(5),
+          ),
+        ),
         child: const Text(
           'FOLLOW',
           style: TextStyle(
@@ -69,18 +76,11 @@ class FriendSuggestions extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        style: ElevatedButton.styleFrom(
-          backgroundColor: const Color(0xFF1CB0F6),
-          elevation: 5,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(5),
-          ),
-        ),
       ),
     );
   }
 
-  followedBy(String name) {
+  Text followedBy(String name) {
     return Text(
       'Followed by $name',
       style: const TextStyle(
@@ -92,7 +92,7 @@ class FriendSuggestions extends StatelessWidget {
     );
   }
 
-  friendName(String name) {
+  Text friendName(String name) {
     return Text(
       name,
       style: const TextStyle(
@@ -103,7 +103,7 @@ class FriendSuggestions extends StatelessWidget {
     );
   }
 
-  avatar(String image) {
+  Container avatar(String image) {
     return Container(
       padding: const EdgeInsets.only(top: 5),
       margin: const EdgeInsets.only(bottom: 10),
@@ -114,7 +114,7 @@ class FriendSuggestions extends StatelessWidget {
     );
   }
 
-  bigTitle() {
+  Align bigTitle() {
     return Align(
       alignment: Alignment.centerLeft,
       child: Container(

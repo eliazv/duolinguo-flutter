@@ -10,8 +10,7 @@ class CourseNode extends StatelessWidget {
   double? percent;
 
   CourseNode(this.name,
-      {this.image, this.color, this.crown, this.percent, Key? key})
-      : super(key: key);
+      {this.image, this.color, this.crown, this.percent, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +32,7 @@ class CourseNode extends StatelessWidget {
     );
   }
 
-  node() {
+  Row node() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -56,7 +55,7 @@ class CourseNode extends StatelessWidget {
     );
   }
 
-  progressCircle() {
+  Transform progressCircle() {
     return Transform.rotate(
       angle: 2.7,
       child: CircularPercentIndicator(
@@ -70,7 +69,7 @@ class CourseNode extends StatelessWidget {
     );
   }
 
-  subCrown() {
+  Positioned subCrown() {
     return Positioned(
       right: 0,
       bottom: 5,
@@ -91,7 +90,7 @@ class CourseNode extends StatelessWidget {
     );
   }
 
-  courseName() {
+  Text courseName() {
     return Text(name,
         style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18));
   }

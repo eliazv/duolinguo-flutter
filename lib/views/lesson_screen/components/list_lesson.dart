@@ -7,8 +7,7 @@ class ListLesson extends StatelessWidget {
   List<String> answers;
 
   ListLesson(this.instructionText, this.question, this.answers,
-      {required this.checkButton, Key? key})
-      : super(key: key);
+      {required this.checkButton, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +41,7 @@ class ListLesson extends StatelessWidget {
     );
   }
 
-  listChoice(String title) {
+  Container listChoice(String title) {
     return Container(
       width: double.infinity,
       margin: const EdgeInsets.only(left: 15, right: 15),
@@ -61,7 +60,7 @@ class ListLesson extends StatelessWidget {
     );
   }
 
-  questionRow(String question) {
+  Container questionRow(String question) {
     return Container(
       margin: const EdgeInsets.only(left: 15, bottom: 5),
       child: Row(
@@ -80,7 +79,7 @@ class ListLesson extends StatelessWidget {
     );
   }
 
-  speakButton() {
+  Container speakButton() {
     return Container(
       padding: const EdgeInsets.all(5),
       decoration: BoxDecoration(
@@ -95,7 +94,7 @@ class ListLesson extends StatelessWidget {
     );
   }
 
-  instruction(String text) {
+  Align instruction(String text) {
     return Align(
       alignment: Alignment.centerLeft,
       child: Container(

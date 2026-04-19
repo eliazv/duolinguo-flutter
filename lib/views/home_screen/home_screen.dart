@@ -13,7 +13,7 @@ import 'package:flutter/material.dart';
 import 'components/profile_app_bar.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   State<StatefulWidget> createState() {

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class GoogleButton extends StatefulWidget {
   final FirebaseAuthentication auth;
 
-  const GoogleButton(this.auth, {Key? key}) : super(key: key);
+  const GoogleButton(this.auth, {super.key});
   @override
   State<StatefulWidget> createState() {
     return GoogleButtonState();
@@ -25,6 +25,12 @@ class GoogleButtonState extends State<GoogleButton> {
             border: Border.all(width: 3, color: Colors.grey.shade400)),
         child: ElevatedButton(
           onPressed: googlePressed,
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.white,
+            elevation: 5,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -41,18 +47,12 @@ class GoogleButtonState extends State<GoogleButton> {
               ),
             ],
           ),
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.white,
-            elevation: 5,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-          ),
         ),
       ),
     );
   }
 
-  googlePressed() {
+  void googlePressed() {
     widget.auth.loginWithGoogle().then((value) {
       if (value == null) {
         setState(() {

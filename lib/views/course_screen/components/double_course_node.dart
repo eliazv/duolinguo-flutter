@@ -6,7 +6,7 @@ class DoubleCourseNode extends StatelessWidget {
   final CourseNode node1;
   final CourseNode node2;
 
-  const DoubleCourseNode(this.node1, this.node2, {Key? key}) : super(key: key);
+  const DoubleCourseNode(this.node1, this.node2, {super.key});
 
   @override
   Widget build(BuildContext context) {

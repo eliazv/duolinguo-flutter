@@ -23,6 +23,12 @@ class FacebookButton extends StatelessWidget {
             //   MaterialPageRoute(builder: (context) => const LoginScreen()),
             // );
           },
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.white,
+            elevation: 5,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -38,12 +44,6 @@ class FacebookButton extends StatelessWidget {
                     fontWeight: FontWeight.bold),
               ),
             ],
-          ),
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.white,
-            elevation: 5,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
           ),
         ),
       ),

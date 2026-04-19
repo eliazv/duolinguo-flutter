@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class GetStartedButton extends StatelessWidget {
   final BuildContext context;
-  const GetStartedButton(this.context, {Key? key}) : super(key: key);
+  const GetStartedButton(this.context, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,19 +15,19 @@ class GetStartedButton extends StatelessWidget {
         onPressed: () {
           Navigator.pushNamed(context, '/home');
         },
+        style: ElevatedButton.styleFrom(
+          backgroundColor: const Color(0xFF7ac70c),
+          elevation: 5,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+        ),
         child: const Text(
           'GET STARTED',
           style: TextStyle(
             color: Colors.white,
             fontSize: 18,
             fontWeight: FontWeight.bold,
-          ),
-        ),
-        style: ElevatedButton.styleFrom(
-          backgroundColor: const Color(0xFF7ac70c),
-          elevation: 5,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
           ),
         ),
       ),

@@ -10,7 +10,7 @@ import 'components/app_bar.dart';
 import 'components/input_field.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   State<StatefulWidget> createState() {
@@ -60,7 +60,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  bottomDisplay() {
+  Expanded bottomDisplay() {
     return Expanded(
       child: Align(
         alignment: FractionalOffset.bottomCenter,

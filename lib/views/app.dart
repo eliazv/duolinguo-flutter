@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'home_screen/home_screen.dart';
 
 class MyDuolingo extends StatelessWidget {
-  const MyDuolingo({Key? key}) : super(key: key);
+  const MyDuolingo({super.key});
 
   @override
   Widget build(BuildContext context) {

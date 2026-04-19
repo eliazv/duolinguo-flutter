@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class LeaderboardAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const LeaderboardAppBar({Key? key}) : super(key: key);
+  const LeaderboardAppBar({super.key});
 
   @override
   Size get preferredSize => const Size.fromHeight(250);
@@ -24,15 +24,15 @@ class LeaderboardAppBar extends StatelessWidget implements PreferredSizeWidget {
     );
   }
 
-  leagues() {
-    ScrollController _controller =
+  SizedBox leagues() {
+    ScrollController controller =
         ScrollController(initialScrollOffset: 89.8 * 4.4);
 
     return SizedBox(
       height: 100,
       child: ListView(
         // itemExtent: 80,
-        controller: _controller,
+        controller: controller,
         // shrinkWrap: true,
         scrollDirection: Axis.horizontal,
         children: [
@@ -54,7 +54,7 @@ class LeaderboardAppBar extends StatelessWidget implements PreferredSizeWidget {
     );
   }
 
-  remainingDay(String text) {
+  Container remainingDay(String text) {
     return Container(
       margin: const EdgeInsets.only(top: 10),
       child: Text(
@@ -68,7 +68,7 @@ class LeaderboardAppBar extends StatelessWidget implements PreferredSizeWidget {
     );
   }
 
-  message(String text) {
+  Container message(String text) {
     return Container(
       margin: const EdgeInsets.only(top: 10),
       child: Text(
@@ -81,7 +81,7 @@ class LeaderboardAppBar extends StatelessWidget implements PreferredSizeWidget {
     );
   }
 
-  bigTitle(String text) {
+  Container bigTitle(String text) {
     return Container(
       margin: const EdgeInsets.only(top: 15),
       child: Text(

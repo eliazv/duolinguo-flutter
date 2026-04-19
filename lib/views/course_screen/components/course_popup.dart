@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class CoursePopup extends StatelessWidget {
   final Color color;
 
-  const CoursePopup({required this.color, Key? key}) : super(key: key);
+  const CoursePopup({required this.color, super.key});
 
   @override
   Widget build(BuildContext context) {

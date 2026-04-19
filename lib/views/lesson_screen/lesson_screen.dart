@@ -5,7 +5,7 @@ import 'package:duolingo/views/lesson_screen/components/list_lesson.dart';
 import 'package:flutter/material.dart';
 
 class LessonScreen extends StatefulWidget {
-  const LessonScreen({Key? key}) : super(key: key);
+  const LessonScreen({super.key});
 
   @override
   State<StatefulWidget> createState() {
@@ -41,7 +41,7 @@ class LessonScreenState extends State<LessonScreen> {
     );
   }
 
-  bottomButton(BuildContext context, String title) {
+  Center bottomButton(BuildContext context, String title) {
     return Center(
       child: Container(
         width: double.infinity,
@@ -63,6 +63,13 @@ class LessonScreenState extends State<LessonScreen> {
               }
             });
           },
+          style: ElevatedButton.styleFrom(
+            backgroundColor: const Color(0xFF58CC02),
+            elevation: 5,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+          ),
           child: Text(
             title,
             style: const TextStyle(
@@ -71,19 +78,12 @@ class LessonScreenState extends State<LessonScreen> {
               fontWeight: FontWeight.bold,
             ),
           ),
-          style: ElevatedButton.styleFrom(
-            backgroundColor: const Color(0xFF58CC02),
-            elevation: 5,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
-            ),
-          ),
         ),
       ),
     );
   }
 
-  dialog(String title) {
+  Align dialog(String title) {
     return Align(
       alignment: Alignment.bottomCenter,
       child: Container(
@@ -101,7 +101,7 @@ class LessonScreenState extends State<LessonScreen> {
     );
   }
 
-  dialogTitle(String text) {
+  Align dialogTitle(String text) {
     return Align(
       alignment: Alignment.centerLeft,
       child: Container(
